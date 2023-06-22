@@ -11,4 +11,10 @@ class PeminjamController extends Controller
          $peminjam = Peminjam::all();
          return view('peminjam.index',compact(['peminjam']));
     }
+
+    function create() 
+    {
+       return view('peminjam.create'); 
+    }
 }
+ 

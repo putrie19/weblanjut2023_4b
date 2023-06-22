@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutControllers;
-use App\Http\PeminjamControllers;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PeminjamController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/peminjam',[PeminjamController::class,'index']);
+Route::get('/peminjam/create',[PeminjamController::class,'create']);
+Route::post('/peminjam/store',[PeminjamController::class,'store']);

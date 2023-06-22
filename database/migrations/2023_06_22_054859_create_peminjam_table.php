@@ -19,7 +19,7 @@ class CreatePeminjamTable extends Migration
             $table->enum('jurusan',['teknik_informatika','industri','teknik_sipil']);
             $table->string('kode_buku');
             $table->string('judul_buku');
-            $table->date('tanggal_terbit');
+            $table->string('alamat');
             $table->date('tanggal_pinjam');
             $table->timestamps();
         });

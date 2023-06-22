@@ -1,20 +1,20 @@
+<a href="/peminjam/create">Add Pinjam<a>
 <table border="1">
-    <tr>
-        <th>ID</th>
+    <th>
         <th>NAMA</th>
         <th>JURUSAN</th>
         <th>KODE BUKU</th>
-        <th>JUDUL BUKU</th>
         <th>TANGGAL TERBIT</th>
         <th>TANGGAL PINJAM</th>
-    </tr>
+    </th>
+    @foreach($peminjam as $p)
     <tr>
-            <td>1</td>
-            <td>rubi</td>
-            <td>teknik_informatika</td>
-            <td>012</td>
-            <td>kualitas</td>
-            <td>2016-06-16</td>
-            <td>2023-06-23</td>
-        </tr>
+        <td>{{$p->id}}</td>
+        <td>{{$p->nama}}</td>
+        <td>{{$p->jurusan}}</td>
+        <td>{{$p->kode_buku}}</td>
+        <td>{{$p->tanggal_terbit}}</td>
+        <td>{{$p->tanggal_pinjam}}</td>
+    </tr>
+   @endforeach
 </table>
